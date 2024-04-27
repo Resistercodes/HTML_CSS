@@ -1,0 +1,85 @@
+<!-- h1, nav(more than one per page is possible, always label if u have more then one nav in a page), hr, section, header, main(only one per page), footer(there can be more than one header and footer per page), -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study talks</title>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO THE WEB PAGE</h1>
+        <nav aria-label="primary-navigation"> <!--if we have more than one nav-->
+            <ul>
+                <li>
+                    <a href="#end_sem_prep"> END SEM PREP</a>
+                </li>
+                <li>
+                    <a href="#DSA_preperation"> DSA PREP</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <main>
+        <section id="end_sem_prep">
+            <p>
+                <ul>
+                    <li>
+                        Stick to the syllabus.
+                    </li>
+                    <li>
+                        Go through all the PYQS thouroughly.
+                    </li>
+                    <li>
+                        Prepare detailed answers with diagrams as well.
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section id="DSA_preperation">
+            <p>
+                <ul>
+                    <li>
+                        Complete striver's sheet!
+                    </li>
+                    <li>
+                        Do top 50 questions from gfg of all topics.
+                    </li>
+                    <li>
+                        Give contests regularly.
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <article>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, molestias molestiae earum perferendis mollitia, facilis provident sunt nesciunt reprehenderit necessitatibus veritatis, ipsam voluptates dolorem at eum veniam beatae esse quibusdam.
+        </article> <!--another sementic tag for article like, para like things-->
+        <aside>
+            <details>
+                <summary>guess the <mark>number of hours</mark> <!--mark is an inline element to highlight some text.-->  i study/code</summary>
+                <p>i can do that  all day!</p>
+            </details> <!--summary and details to give a markdown as question and the para will open if u click on the markdown. details and summary work together. details outside, summary inside.-->
+        </aside> <!--another sementic tag for aside or make a diff section. (not much important)-->
+        <!-- we can give time and datetime attribute to give more infor for assistive technologies. like: -->
+        <time datetime="08:00">8 A.M.</time> <!--though it doesnt change anything in the page but it provides meaning to the browser. look at mdn for more about this-->
+
+        <!-- div stands for divider, although it doesnt mean anything but it provides sementic meaning, its a block element -->
+<!-- span is another sementic element like div, but its an inline element, more used one -->
+
+        <span></span>
+
+        <!-- html5 outliner extension on chrome to see all our sementic elements -->
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        &lt;&lt;&lt; &copy; resister &gt; &gt; &gt;
+<p>
+    <a href="#">Back to top</a>
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+   <table>
+    <caption>My daily schedule</caption> <!--caption to the table-->
+
+    <!--sementics to the table be given by thead, tbody, tfoot-->
+    <tr>
+        <th>&nbsp;</th>
+        <th>Time</th>
+        <th>activity</th> <!--tr= table row, td= table data, th= table haeder(already bolder)
+        also, we can give scope="row", or col for more sementics. and give id to each td, th etc-->
+    </tr>
+    <tr>
+        <th>morning</th>
+        <td>
+            <time datetime="08:00">8am</time>- <time datetime="09:00">9am</time>
+        </td>
+    
+    
+        <td> freshen up</td></tr> 
+       <tr> 
+        <th>afternoon</th><td>
+            <time datetime="09:00">9am</time>- <time datetime="11:00">11am</time>
+        </td>
+        <td> study</td>
+        
+
+        </tr>
+        <tr>
+            <td>
+            <time datetime="11:00">11am</time>- <time datetime="15:00">3pm</time>
+        </td>
+        <td> other things</td>
+    </tr>
+    <tr>
+        <td rowspan="2">all other times</td>
+        <td >free time</td> <!--colspan and rowspan to take spaces of more than one row or column-->
+
+    </tr>
+    <tr>
+        <td>sleep</td>
+    </tr>
+   </table> 
+</body>
+</html>

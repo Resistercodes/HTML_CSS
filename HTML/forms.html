@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <!-- contact form -->
+    <article id="contact">
+        <h2>Contact me</h2>
+        <p>I'd really like to hear from you!</p>
+        <form action="https://httpbin.org/get" method="get"> <!-- this link gives all the info entered in the form after hitting submit and get method is used to get that info-->
+
+        <fieldset>
+            
+             <legend>Personal Info</legend><!--this is written in that box created by fieldset. comes under fieldset only. its a part of the form. -->
+
+            <label for="firstname">firstname:</label><!--this is shown at the form, and we have to match for value with id value of input tag.-->
+            <input type="text" name="firstname" id="firstname" placeholder="Jane" autocomplete="on" required autofocus> 
+            <!--id should be matching with for value.
+            name is how it is identified at the server level.
+            type is for type of input. 
+            placeholder attribute for something to be put as a placeholder there, it disappears when user inputs something.
+            autocomplete is set be on or off for autocompletion, it wud remember other previous inputs.
+            required is for something that is required before sumbitting the form.
+            autofocus can be only once in the page. it auto focuses the curser in an element.-->
+            <p>
+                <label for="lastname">lastname:</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Doe" autocomplete="on" required >
+         </p>
+            <p>
+                <label for="password">password:</label>
+            <input type="password" name="password" id="password" placeholder="your secret" required > 
+        </p> <!--autocomplete isnt supported in a password.-->
+            <p><label for="phone">phone:</label>
+                <input type="tel" name="phone" id="phone" placeholder="5555555555" 
+                pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required > </p>
+                <p>
+                    <label for="decade">favourite decade:</label>
+                <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980"> </p> 
+                <!-- min and max for min and max range. step attribute for steps of 10 yrs here, value is the thing that is already set by default. -->
+                <p>
+                    <label for="coffee">your favourite coffee:</label>
+                <select name="coffee" id="coffee" multiple size="2"> <!--multiple to show how many size we want to display initially, and we can select two at a time by this.-->
+                    <optgroup label="A">
+                    <option value="regular coffee">regular coffee</option>
+                    <option value="latte" selected>latte</option> </optgroup><!--selected for default value-->
+                    <optgroup label="B">
+                    <option value="cappucino">cappucino</option>
+                    <option value="others">others</option></optgroup>
+                    <!-- options are there. we can give optgroup for grouping values of options. -->
+                </select> 
+                <!-- select is used if we have to select a value out of many. -->
+            
+                <p>
+                    <label for="coffee">Favourite coffee</label>
+                    <input type="text" name="coffee" id="coffee" list="coffee-list">
+                    <datalist id="coffee-list">
+                       <option value="coffee">
+                       <option value="latte">
+                       <option value="expresso">
+                       <option value="americano">
+                       <option value="cortado">
+                       <option value="other">
+                    </datalist>
+                </p>
+            
+            </fieldset> <!--fieldset makes a box in the form to differentiate different informations, or group them.-->
+            <br>
+            <fieldset>
+                <legend>
+                    What is your favourite food?
+                </legend>
+                <p>
+                    <input type="radio" name="food" id="tacos" value="tacos"> <!--radio button means to choose one at a time-->
+                    <label for="tacos">tacos</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="pizza" value="pizza">
+                    <label for="pizza">pizza</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="burger" value="burger">
+                    <label for="burger">burgers</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    Do you have a pet?
+                </legend>
+                <p>
+                    <input type="checkbox" name="pet" id="dog" value="dog"> <!--checkbox-->
+                    <label for="dog">Dog</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pet" id="cat" value="cat">
+                    <label for="cat">Cat</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pet" id="fish" value="fish">
+                    <label for="fish">Fish</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Send me a note
+                </legend>
+                <label for="message">Your message</label>
+                <br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="type your text here"></textarea> 
+                <!--textarea for getting lots of text input-->
+            </fieldset>
+            <br>
+           
+                
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">post</button>
+            <!-- diff b/w get and post is that post makes the same url in last and all info is saved under "form" object. rather in get, all info is saved under args object and url in the end is changed which is made up of all the entered info -->
+        </form> <!--action attribute is by default with the form-->
+
+        
+        <!-- this kinda label-input gives a list of all values on clicking the input area. we dont use closing tag of option here. we use list attribute on input whose value shud be equal to the id of datalist tag. we just give value to the options. dont write anything in between the tags and closing is also absent.  -->
+
+    </article>
+</body>
+</html>
